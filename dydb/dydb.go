@@ -1,6 +1,7 @@
 package dydb
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/aws/aws-sdk-go/aws"
@@ -41,5 +42,5 @@ func PutItems(tableName string, items []Map) {
 		}
 	}
 
-	log.Println("Successfully added items to table %s:\n%+100v\n", tableName, items)
+	log.Println(fmt.Sprintf("Successfully added items to table %s:\n%+100v\n", tableName, items))
 }
